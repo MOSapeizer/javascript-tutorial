@@ -8,11 +8,20 @@
 </head>
 <body>
     <h1>TODO LIST</h1>
-    <input type="text" name="todo-item" value="">
-    <input type="submit">
+    <input id="todo-item-input" type="text" name="todo-item" value="">
+    <input id="todo-item-submit" type="submit">
     <ul>
         <li>吃飯</li>
         <li>睡覺</li>
     </ul>
+
+    <script>
+        var $todo_item_input = document.querySelector("#todo-item-input");
+        var $todo_item_submit = document.querySelector("#todo-item-submit");
+        $todo_item_submit.addEventListener("click", function() {
+            var text = $todo_item_input.value;
+            console.log( text );
+        });
+    </script>
 </body>
 </html>
