@@ -13,14 +13,17 @@
     <ul>
         <li>吃飯</li>
         <li>睡覺</li>
+        <li>aaa</li>
+        <li>bbb</li>
     </ul>
 
     <script>
         var $todo_item_input = document.querySelector("#todo-item-input");
         var $todo_item_submit = document.querySelector("#todo-item-submit");
         $todo_item_submit.addEventListener("click", function() {
-            var text = $todo_item_input.value;
-            console.log( text );
+            var list = document.getElementsByTagName("ul")[0];
+            list.innerHTML += $todo_item_input.value;
+            // 接著做。
         });
     </script>
 </body>
